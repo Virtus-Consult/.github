@@ -1,0 +1,7 @@
+{
+  "name": "Virtus — CI Python",
+  "description": "Lint (ruff) e testes (pytest) padrão para projetos Python da Virtus.",
+  "iconName": "octicon package",
+  "categories": ["Continuous integration", "Python"],
+  "filePatterns": ["requirements.txt$", "pyproject.toml$"]
+}

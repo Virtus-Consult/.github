@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 💬 Dúvidas e discussões
+    url: https://github.com/orgs/Virtus-Consult/discussions
+    about: Perguntas gerais devem ir para o Discussions, não para issues.
+  - name: 🔒 Vulnerabilidade de segurança
+    url: https://github.com/Virtus-Consult/.github/blob/main/SECURITY.md
+    about: Reporte falhas de segurança de forma privada.

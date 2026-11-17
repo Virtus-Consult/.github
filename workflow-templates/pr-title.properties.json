@@ -1,0 +1,6 @@
+{
+  "name": "Virtus — Título de PR (Conventional Commits)",
+  "description": "Valida se o título do PR segue Conventional Commits, já que ele vira o commit no squash merge.",
+  "iconName": "octicon git-pull-request",
+  "categories": ["Automation"]
+}

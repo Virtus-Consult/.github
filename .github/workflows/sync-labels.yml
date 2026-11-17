@@ -1,0 +1,25 @@
+name: Sincronizar labels
+
+# Aplica labels.yml em todos os repositórios da organização.
+# Requer o secret ORG_ADMIN_TOKEN (fine-grained PAT com "Issues: write" em todos os repos da org).
+on:
+  push:
+    branches: [main]
+    paths: [labels.yml]
+  schedule:
+    - cron: "0 6 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Sincroniza labels em todos os repositórios
+        env:
+          GH_TOKEN: ${{ secrets.ORG_ADMIN_TOKEN }}
+          ORG: ${{ github.repository_owner }}
+        run: bash scripts/sync-labels.sh "$ORG"

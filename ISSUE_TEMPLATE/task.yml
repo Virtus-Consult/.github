@@ -1,0 +1,17 @@
+name: 📋 Tarefa
+description: Trabalho técnico interno (refatoração, infra, débito técnico)
+title: "[Tarefa]: "
+labels: ["tipo: tarefa"]
+body:
+  - type: textarea
+    id: descricao
+    attributes:
+      label: Descrição
+    validations:
+      required: true
+  - type: textarea
+    id: checklist
+    attributes:
+      label: Checklist
+      value: |
+        - [ ]

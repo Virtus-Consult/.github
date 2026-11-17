@@ -1,0 +1,6 @@
+{
+  "name": "Virtus — Release",
+  "description": "Gera versão semântica, tag e CHANGELOG automaticamente a partir dos Conventional Commits.",
+  "iconName": "octicon tag",
+  "categories": ["Deployment", "Automation"]
+}

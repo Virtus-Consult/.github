@@ -1,0 +1,30 @@
+name: ✨ Funcionalidade
+description: Sugira uma nova funcionalidade ou melhoria
+title: "[Feature]: "
+labels: ["tipo: funcionalidade", "status: triagem"]
+body:
+  - type: textarea
+    id: problema
+    attributes:
+      label: Qual problema isso resolve?
+      description: Descreva a necessidade, não a solução.
+      placeholder: "Como [usuário], eu preciso [ação] para [objetivo]."
+    validations:
+      required: true
+  - type: textarea
+    id: solucao
+    attributes:
+      label: Solução proposta
+    validations:
+      required: true
+  - type: textarea
+    id: alternativas
+    attributes:
+      label: Alternativas consideradas
+  - type: textarea
+    id: criterios
+    attributes:
+      label: Critérios de aceite
+      placeholder: |
+        - [ ] ...
+        - [ ] ...

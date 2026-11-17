@@ -1,0 +1,52 @@
+name: 🐛 Bug
+description: Reporte um comportamento incorreto
+title: "[Bug]: "
+labels: ["tipo: bug", "status: triagem"]
+body:
+  - type: markdown
+    attributes:
+      value: Obrigado por reportar! Antes de enviar, verifique se já não existe uma issue semelhante.
+  - type: textarea
+    id: descricao
+    attributes:
+      label: O que aconteceu?
+      description: Descreva o problema de forma clara.
+    validations:
+      required: true
+  - type: textarea
+    id: esperado
+    attributes:
+      label: O que era esperado?
+    validations:
+      required: true
+  - type: textarea
+    id: reproduzir
+    attributes:
+      label: Passos para reproduzir
+      placeholder: |
+        1. Acesse '...'
+        2. Clique em '...'
+        3. Veja o erro
+    validations:
+      required: true
+  - type: input
+    id: versao
+    attributes:
+      label: Versão / commit / ambiente
+      placeholder: "v1.2.3, produção, Chrome 130"
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs ou prints
+      render: shell
+  - type: dropdown
+    id: severidade
+    attributes:
+      label: Severidade
+      options:
+        - Baixa — incômodo, há alternativa
+        - Média — funcionalidade prejudicada
+        - Alta — funcionalidade principal quebrada
+        - Crítica — sistema fora do ar / perda de dados
+    validations:
+      required: true
