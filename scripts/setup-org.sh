@@ -26,7 +26,7 @@ gh api -X PATCH "orgs/$ORG" \
   -F members_can_create_private_repositories=true \
   >/dev/null 2>&1 \
   && echo "  membros só criam repos privados" \
-  || echo "  ⚠ restrição de repos públicos indisponível no plano atual"
+  || echo "  aviso: restrição de repos públicos indisponível no plano atual"
 
 echo "== Times =="
 create_team() {
@@ -50,7 +50,7 @@ if gh api "orgs/$ORG/rulesets" -q '.[].name' | grep -qx "protecao-main"; then
 else
   gh api -X POST "orgs/$ORG/rulesets" --input "$ROOT/rulesets/protecao-main.json" >/dev/null \
     && echo "  ruleset criado" \
-    || echo "  ⚠ falhou — rulesets de org em repos privados exigem plano Team/Enterprise"
+    || echo "  aviso: falhou — rulesets de org em repos privados exigem plano Team/Enterprise"
 fi
 
 echo "== Permissões padrão do GITHUB_TOKEN nas Actions =="

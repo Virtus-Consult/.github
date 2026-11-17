@@ -6,12 +6,12 @@ Closes #
 
 ## Tipo de mudança
 
-- [ ] ✨ Funcionalidade
-- [ ] 🐛 Correção de bug
-- [ ] ♻️ Refatoração (sem mudança de comportamento)
-- [ ] 📝 Documentação
-- [ ] 🔧 Configuração / CI
-- [ ] 💥 Breaking change
+- [ ] Funcionalidade
+- [ ] Correção de bug
+- [ ] Refatoração (sem mudança de comportamento)
+- [ ] Documentação
+- [ ] Configuração / CI
+- [ ] Breaking change
 
 ## Como testar
 
