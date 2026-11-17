@@ -54,7 +54,7 @@ Esta organização reúne o braço de **tecnologia** da Virtus: os sistemas, aut
 
 <img src="https://raw.githubusercontent.com/Virtus-Consult/.github/main/profile/assets/divisor-acesso.svg" alt="Acesso rápido" width="100%">
 
-| | |
+| Recurso | Descrição |
 | :--- | :--- |
 | [Guia de contribuição](https://github.com/Virtus-Consult/.github/blob/main/CONTRIBUTING.md) | Fluxo de branches, commits, Pull Requests e revisão |
 | [Padrões de engenharia](https://github.com/Virtus-Consult/.github/tree/main/docs) | Convenções de nomenclatura, versionamento e releases |
