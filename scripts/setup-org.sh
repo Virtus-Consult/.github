@@ -10,8 +10,6 @@ ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 echo "== Configurações gerais da org =="
 gh api -X PATCH "orgs/$ORG" \
   -f default_repository_permission=read \
-  -F members_can_create_public_repositories=false \
-  -F members_can_create_private_repositories=true \
   -F members_can_fork_private_repositories=false \
   -F web_commit_signoff_required=false \
   -F dependabot_alerts_enabled_for_new_repositories=true \
@@ -21,6 +19,14 @@ gh api -X PATCH "orgs/$ORG" \
   -F secret_scanning_push_protection_enabled_for_new_repositories=true \
   >/dev/null
 echo "ok"
+
+# Restringir membros a criar apenas repos privados exige plano Team/Enterprise
+gh api -X PATCH "orgs/$ORG" \
+  -F members_can_create_public_repositories=false \
+  -F members_can_create_private_repositories=true \
+  >/dev/null 2>&1 \
+  && echo "  membros só criam repos privados" \
+  || echo "  ⚠ restrição de repos públicos indisponível no plano atual"
 
 echo "== Times =="
 create_team() {
